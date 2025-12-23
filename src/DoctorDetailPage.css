@@ -1,0 +1,1017 @@
+/* карточки врачей */
+.doctor-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 60vh;
+  padding: 40px 20px;
+  margin-left: 130px;
+  margin-top: 30px;
+  width: calc(100% - 150px);
+}
+
+/* Заголовок специальности */
+.specialty-title-header {
+  color: #2C3E50;
+  font-size: 28px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #3498DB;
+  font-weight: 700;
+  text-align: left;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Контейнер для карточек врачей */
+.doctors-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* ОТДЕЛЬНАЯ КАРТОЧКА ВРАЧА */
+.individual-doctor-card {
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #E0E0E0;
+  padding: 25px;
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  transition: none;
+  cursor: default;
+}
+
+/* Левая часть карточки: фото врача */
+.doctor-photo-section {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+}
+
+/* КРУГЛОЕ ФОТО ВРАЧА */
+.doctor-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #E8F5E9;
+  margin-bottom: 15px;
+}
+
+/* Заглушка для фото врача */
+.doctor-photo-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6F9C38, #2A5C3D);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #E8F5E9;
+  margin-bottom: 15px;
+}
+
+.photo-text {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Центральная часть: информация о враче */
+.doctor-info-center {
+  flex: 1;
+  padding-right: 20px;
+}
+
+/* Специальность врача */
+.doctor-specialty {
+  color: #3498DB;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ФИО врача */
+.doctor-full-name {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Адрес */
+.doctor-address-section {
+  margin-bottom: 15px;
+}
+
+.address-label {
+  color: #7F8C8D;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.doctor-address {
+  color: #2C3E50;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Стаж и квалификация */
+.doctor-info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.doctor-experience {
+  color: #7F8C8D;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.doctor-qualification {
+  background: #E8F5E9;
+  color: #6F9C38;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.doctor-science {
+  background: #E3F2FD;
+  color: #3498DB;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Правая часть: даты и время */
+.doctor-right-section {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Стили для заголовка с кнопкой листа ожидания */
+.dates-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.dates-section {
+  margin-bottom: 5px;
+}
+
+.dates-label {
+  color: #7F8C8D;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Кнопка лист ожидания */
+.waitlist-btn-corner {
+  background-color: #D8E0CB !important;
+  border: 2px solid #8EB281 !important;
+  color: #2C3E50 !important;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+/* Стили для дат */
+.dates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.date-item {
+  background-color: #D8E0CB !important;
+  border: 2px solid #8EB281 !important;
+  border-radius: 8px;
+  padding: 6px 10px;
+  min-width: 85px;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.date-item .date-day {
+  color: #5D6D7E;
+  font-size: 12px;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.date-item .date-number {
+  color: #2C3E50;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Время записи */
+.times-section {
+  margin-top: 5px;
+}
+
+.times-label {
+  color: #7F8C8D;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.times-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.time-item {
+  background-color: #D8E0CB !important;
+  border: 2px solid #8EB281 !important;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #2C3E50 !important;
+  font-weight: 600;
+  min-width: 65px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Ховер эффекты для всех интерактивных кнопок */
+.date-item:hover,
+.time-item:hover,
+.waitlist-btn-corner:hover {
+  background-color: #C4D0B5 !important;
+  border-color: #7A9A6E !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(142, 178, 129, 0.3);
+}
+
+.date-item:active,
+.time-item:active,
+.waitlist-btn-corner:active {
+  background-color: #8EB281 !important;
+  border-color: #6F9C38 !important;
+  color: white !important;
+  transform: translateY(0);
+}
+
+/* Кнопка назад */
+.back-to-doctors {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid #E8F5E9;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.back-btn {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #6F9C38;
+  color: #6F9C38;
+  padding: 12px 35px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #6F9C38;
+  color: white;
+}
+
+/* Стили для поиска на странице врача */
+.search-section-doctor {
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.search-group-doctor {
+  display: flex;
+  align-items: center;
+  background-color: #D8E0CB;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #C4D0B5;
+  transition: border-color 0.2s ease;
+  max-width: 600px;
+}
+
+.search-group-doctor:hover {
+  border-color: #1A7C4E;
+}
+
+.search-icon-doctor {
+  color: #000000;
+  font-size: 20px;
+  margin-right: 12px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input-doctor {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px 0;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+  color: #2C3E50;
+  background-color: transparent;
+}
+
+.search-input-doctor::placeholder {
+  color: #5B5B5B;
+  opacity: 0.8;
+}
+
+.search-btn-doctor {
+  background-color: #6C757D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-btn-doctor:hover {
+  background-color: #5A6268;
+}
+
+.search-btn-icon-doctor {
+  font-size: 14px;
+}
+
+/* Модальные окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-code,
+.modal-waitlist-step1,
+.modal-success,
+.modal-login {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #7F8C8D;
+  line-height: 1;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: #E53935;
+}
+
+.modal-code h3,
+.modal-waitlist-step1 h3,
+.modal-success h3,
+.modal-login h3 {
+  color: #2C3E50;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.modal-code p,
+.modal-waitlist-step1 p,
+.modal-success p,
+.modal-login p {
+  color: #5D6D7E;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Для окна листа ожидания  */
+.modal-waitlist-step1 p {
+  text-align: left;
+  font-size: 16px;
+}
+
+.modal-waitlist-step1 p:first-of-type {
+  margin-top: 20px;
+}
+
+/* Стили для кнопок выбора даты в модальном окне листа ожидания */
+.available-dates {
+  margin-top: 25px;
+}
+
+.available-dates h4 {
+  color: #2C3E50;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.dates-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.date-selection-btn {
+  background-color: #D8E0CB !important;
+  border: 2px solid #8EB281 !important;
+  border-radius: 8px;
+  padding: 10px 15px;
+  min-width: 85px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #2C3E50;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date-selection-btn:hover {
+  background-color: #C4D0B5 !important;
+  border-color: #7A9A6E !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(142, 178, 129, 0.3);
+}
+
+.date-selection-btn:active {
+  background-color: #8EB281 !important;
+  border-color: #6F9C38 !important;
+  color: white;
+  transform: translateY(0);
+}
+
+.date-selection-btn .date-weekday {
+  color: #5D6D7E;
+  font-size: 12px;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.date-selection-btn .date-day {
+  color: #2C3E50;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Стили для поля ввода кода */
+.code-input-container {
+  margin: 25px 0;
+  position: relative;
+}
+
+.code-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #DEE2E6;
+  border-radius: 10px;
+  font-family: 'Gotham Pro', monospace;
+  letter-spacing: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.code-input:focus {
+  outline: none;
+  border-color: #6F9C38;
+  box-shadow: 0 0 0 3px rgba(111, 156, 56, 0.1);
+}
+
+.code-hint {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6F9C38;
+  text-align: center;
+  font-weight: 600;
+}
+
+.code-error {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #E53935;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Кнопка подтверждения */
+.modal-confirm-btn {
+  background: #6F9C38;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 25px auto;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.modal-confirm-btn:hover {
+  background: #5a8a2f;
+}
+
+/* Повторная отправка кода */
+.resend-code {
+  text-align: center;
+  margin-top: 20px;
+  color: #7F8C8D;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+.resend-btn {
+  background: none;
+  border: none;
+  color: #3498DB;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.resend-btn:hover {
+  color: #2980B9;
+}
+
+.resend-code span {
+  color: #E53935;
+  font-weight: 600;
+}
+
+/* Информация о записи */
+.appointment-info,
+.appointment-details {
+  background: #F8F9FA;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #E8F5E9;
+}
+
+.appointment-info p,
+.appointment-details p {
+  text-align: left;
+  margin-bottom: 10px;
+  color: #2C3E50;
+}
+
+.appointment-info p:last-child,
+.appointment-details p:last-child {
+  margin-bottom: 0;
+}
+
+/* Успешная запись */
+.modal-success {
+  text-align: center;
+}
+
+.modal-success h3 {
+  color: #6F9C38;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.modal-success p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.modal-success-btn {
+  background: #3498DB;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.modal-success-btn:hover {
+  background: #2980B9;
+}
+
+/* Кнопки авторизации */
+.modal-auth-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.modal-login-btn,
+.modal-register-btn {
+  flex: 1;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid;
+  transition: all 0.3s ease;
+}
+
+.modal-login-btn {
+  background: white;
+  border-color: #3498DB;
+  color: #3498DB;
+}
+
+.modal-login-btn:hover {
+  background: #3498DB;
+  color: white;
+}
+
+.modal-register-btn {
+  background: #6F9C38;
+  border-color: #6F9C38;
+  color: white;
+}
+
+.modal-register-btn:hover {
+  background: #5a8a2f;
+  border-color: #5a8a2f;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .doctor-detail-container {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .doctor-detail-container {
+    justify-content: center;
+    margin-left: 0;
+    align-items: center;
+  }
+  
+  .individual-doctor-card {
+    flex-direction: column;
+    gap: 25px;
+    max-width: 600px;
+  }
+  
+  .doctor-right-section {
+    width: 100%;
+  }
+  
+  .doctor-info-center {
+    padding-right: 0;
+    border-bottom: 1px solid #E8F5E9;
+    padding-bottom: 20px;
+  }
+  
+  .doctor-photo-section {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .dates-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .waitlist-btn-corner {
+    align-self: flex-end;
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctor-detail-container {
+    padding: 30px 15px;
+  }
+  
+  .specialty-title-header {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .doctor-full-name {
+    font-size: 18px;
+  }
+  
+  .doctor-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .doctor-photo-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .dates-header {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .waitlist-btn-corner {
+    margin-top: 0;
+  }
+  
+  .dates-grid,
+  .times-grid {
+    justify-content: center;
+  }
+  
+  .date-item {
+    min-width: 75px;
+    padding: 5px 8px;
+  }
+  
+  .time-item {
+    min-width: 55px;
+    padding: 5px 8px;
+  }
+  
+  .modal-code,
+  .modal-waitlist-step1,
+  .modal-success,
+  .modal-login {
+    padding: 25px 20px;
+    max-width: 90%;
+  }
+  
+  .modal-code h3,
+  .modal-waitlist-step1 h3,
+  .modal-success h3,
+  .modal-login h3 {
+    font-size: 20px;
+  }
+  
+  .code-input {
+    font-size: 18px;
+    padding: 12px;
+  }
+  
+  .modal-auth-buttons {
+    flex-direction: column;
+  }
+  
+  .dates-selection {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-photo-section {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .doctor-photo {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .doctor-photo-placeholder {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .dates-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .waitlist-btn-corner {
+    align-self: flex-start;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .date-item {
+    min-width: 75px;
+    padding: 5px 8px;
+  }
+  
+  .time-item {
+    min-width: 55px;
+    padding: 5px 8px;
+  }
+}
+
+
+
+/*  стили для кнопки листа ожидания */
+.waitlist-btn-corner {
+  background-color: #D8E0CB !important;
+  border: 2px solid #8EB281 !important;
+  color: #2C3E50 !important;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin-left: 10px;
+  display: inline-block !important;
+}
+
+/* Ховер эффекты для кнопки листа ожидания */
+.waitlist-btn-corner:hover {
+  background-color: #C4D0B5 !important;
+  border-color: #7A9A6E !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(142, 178, 129, 0.3);
+}
+
+.waitlist-btn-corner:active {
+  background-color: #8EB281 !important;
+  border-color: #6F9C38 !important;
+  color: white !important;
+  transform: translateY(0);
+}
+
+/* заголовок с кнопкой правильно выровнен */
+.dates-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.dates-label {
+  color: #7F8C8D;
+  font-size: 14px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+/* Скрываем старую кнопку  */
+.waitlist-btn {
+  display: none !important;
+}
+
+.waitlist-section {
+  display: none !important;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .dates-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .waitlist-btn-corner {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+
+
+
+/* Стили для выделенной даты */
+.date-item.date-selected {
+  background-color: #6F9C38 !important;
+  border-color: #5a8a2f !important;
+  color: white !important;
+}
+
+.date-item.date-selected .date-day {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.date-item.date-selected .date-number {
+  color: white !important;
+  font-weight: 700;
+}
+
+/* Стили для отключенных кнопок времени */
+.time-item:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #E8E8E8 !important;
+  border-color: #CCCCCC !important;
+  color: #999999 !important;
+}
+
+.time-item:disabled:hover {
+  background-color: #E8E8E8 !important;
+  border-color: #CCCCCC !important;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Информация о выбранной дате */
+.selected-date-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6F9C38;
+  font-weight: 500;
+  padding: 8px 12px;
+  background-color: #F0F7E9;
+  border-radius: 6px;
+  border: 1px solid #D8E0CB;
+  text-align: center;
+}

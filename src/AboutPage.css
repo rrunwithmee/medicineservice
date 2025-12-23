@@ -1,0 +1,273 @@
+/* Контейнер для всей страницы */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  margin: 40px 130px;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Верхний блок с описанием сервиса */
+.service-description-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+.service-description {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Иконка стетоскопа */
+.service-icon {
+  color: #2A5C3D;
+  font-size: 28px;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* Текст о сервисе */
+.service-text {
+  flex: 1;
+}
+
+.service-title {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+}
+
+.service-description-text {
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+}
+
+/* Серый блок с тремя компонентами */
+.about-features-section {
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about-features-container {
+  background: #E4E4E4;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 0; 
+  margin-right: auto; 
+
+.about-features-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+}
+
+.about-feature-card {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  padding: 15px;
+  min-height: 120px;
+  background: #E4E4E4;
+  gap: 15px;
+}
+
+/* Иконки  */
+.about-feature-icon {
+  color: #000000;
+  font-size: 24px;
+  margin-top: 5px;
+  flex-shrink: 0;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-feature-content {
+  flex: 1;
+}
+
+/* Заголовки - черные жирные */
+.about-feature-title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+  line-height: 1.3;
+}
+
+/* Текст - черные не жирные */
+.about-feature-text {
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .about-container {
+    margin: 40px 30px;
+  }
+  
+  .service-description-container,
+  .about-features-container {
+    max-width: 600px;
+  }
+  
+  .about-features-container {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .service-description-container {
+    justify-content: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .about-features-section {
+    justify-content: center;
+  }
+  
+  .about-features-container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .about-features-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .about-feature-card {
+    gap: 20px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    margin: 30px 20px;
+  }
+  
+  .service-description {
+    padding: 25px 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .service-icon {
+    font-size: 32px;
+    margin-top: 0;
+  }
+  
+  .service-title {
+    text-align: center;
+  }
+  
+  .service-description-text {
+    text-align: center;
+  }
+  
+  .about-features-container {
+    padding: 20px 15px;
+    max-width: 95%;
+  }
+  
+  .about-feature-card {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .about-feature-icon {
+    font-size: 24px;
+  }
+  
+  .about-feature-title {
+    font-size: 16px;
+  }
+  
+  .about-feature-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    margin: 20px 15px;
+  }
+  
+  .service-description {
+    padding: 20px 25px;
+  }
+  
+  .service-title {
+    font-size: 18px;
+  }
+  
+  .service-description-text {
+    font-size: 15px;
+  }
+  
+  .about-features-container {
+    padding: 15px 10px;
+  }
+  
+  .about-feature-card {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px;
+    padding: 10px;
+  }
+  
+  .about-feature-icon {
+    font-size: 22px;
+  }
+  
+  .about-feature-title {
+    font-size: 15px;
+  }
+  
+  .about-feature-text {
+    font-size: 12px;
+  }
+}

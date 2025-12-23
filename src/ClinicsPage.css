@@ -1,0 +1,156 @@
+/* Контейнер для всей страницы */
+.clinics-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  margin: 40px 130px;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Белый блок с информацией о поликлиниках */
+.clinics-info-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+.clinics-info {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  border: 1px solid #e0e0e0;
+}
+
+/* Заголовок - черный жирный */
+.clinics-title {
+  color: #000000;
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: left;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+}
+
+/* Текст контактов  */
+.clinics-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-line {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Контейнер для ссылки на PDF */
+.pdf-link-container {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #E8F5E9;
+  text-align: left;
+}
+
+/* Ссылка на PDF - курсив */
+.pdf-link {
+  color: #3498DB;
+  font-size: 18px;
+  font-style: italic;
+  text-decoration: none;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.pdf-link:hover {
+  color: #2980B9;
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .clinics-container {
+    margin: 40px 30px;
+  }
+  
+  .clinics-info-container {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 992px) {
+  .clinics-info-container {
+    justify-content: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .pdf-link-container {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .clinics-container {
+    margin: 30px 20px;
+  }
+  
+  .clinics-info {
+    padding: 25px 30px;
+  }
+  
+  .clinics-title {
+    font-size: 28px;
+  }
+  
+  .contact-line {
+    font-size: 16px;
+  }
+  
+  .pdf-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clinics-container {
+    margin: 20px 15px;
+  }
+  
+  .clinics-info {
+    padding: 20px 25px;
+  }
+  
+  .clinics-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .contact-line {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .pdf-link-container {
+    text-align: center;
+  }
+  
+  .pdf-link {
+    font-size: 15px;
+  }
+}

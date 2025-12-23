@@ -1,0 +1,157 @@
+
+/* БЕЛЫЙ БЛОК СО СПИСКОМ ВРАЧЕЙ  */
+.doctors-form-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 60vh;
+  padding: 40px 20px;
+  margin-left: 130px;
+  margin-top: 30px;
+}
+
+.doctors-form {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  margin-left: 0;
+}
+
+.form-title {
+  color: #2A5C3D;
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.form-subtitle {
+  color: #6F9C38;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Сетка врачей 5 в ряд */
+.doctors-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.doctors-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+/* Кнопки специальностей в сетке */
+.doctor-grid-btn {
+  background: #F8F9FA;
+  border: 1px solid #DEE2E6;
+  border-radius: 10px;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: #2C3E50;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+  text-align: center;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  line-height: 1.3;
+}
+
+.doctor-grid-btn:hover {
+  background: #E8F5E9;
+  border-color: #6F9C38;
+  color: #2A5C3D;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(111, 156, 56, 0.2);
+}
+
+/* Для длинных названий */
+.doctor-grid-btn:nth-child(3), /* Невролог */
+.doctor-grid-btn:nth-child(4), /* Врачи общей практики */
+.doctor-grid-btn:nth-child(7), /* Дерматолог */
+.doctor-grid-btn:nth-child(8), /* Отоларинголог */
+.doctor-grid-btn:nth-child(13), /* Эндокринолог */
+.doctor-grid-btn:nth-child(17), /* Психолог */
+.doctor-grid-btn:nth-child(18), /* Психиатр */
+.doctor-grid-btn:nth-child(19) /* Психотерапевт */ {
+  font-size: 13px;
+  padding: 12px 8px;
+}
+
+.doctors-count {
+  color: #6F9C38;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #E8F5E9;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .doctors-form-container {
+    margin-left: 30px;
+  }
+  
+  .doctors-form {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 992px) {
+  .doctors-form-container {
+    justify-content: center;
+    margin-left: 0;
+  }
+  
+  .doctors-form {
+    max-width: 90%;
+  }
+  
+  .doctors-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .doctors-form {
+    padding: 30px 20px;
+    max-width: 95%;
+  }
+  
+  .form-title {
+    font-size: 24px;
+  }
+  
+  .doctors-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .doctor-grid-btn {
+    font-size: 13px;
+    padding: 12px 8px;
+    min-height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctors-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .doctor-grid-btn {
+    min-height: 50px;
+  }
+}

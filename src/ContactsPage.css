@@ -1,0 +1,200 @@
+
+/* Контейнер для всей страницы контактов */
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  margin: 40px 130px;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Белый блок с контактами  */
+.contacts-info-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+.contacts-info {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  border: 1px solid #e0e0e0;
+}
+
+/* Заголовок */
+.contacts-title {
+  color: #000000;
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: left;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+}
+
+/* Текст контактов */
+.contacts-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-line {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Серый блок с информацией о сервисе - под белым блоком */
+.service-info-container {
+  background: #E4E4E4;
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 0;
+}
+
+.service-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Иконка стетоскопа */
+.service-icon {
+  color: #2A5C3D;
+  font-size: 28px;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* Текст о сервисе */
+.service-text {
+  flex: 1;
+}
+
+.service-title {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+}
+
+.service-description {
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'Gotham Pro', Arial, sans-serif;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .contacts-container {
+    margin: 40px 30px;
+  }
+  
+  .contacts-info-container {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contacts-info-container {
+    justify-content: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .service-info-container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-container {
+    margin: 30px 20px;
+  }
+  
+  .contacts-info {
+    padding: 25px 30px;
+  }
+  
+  .contacts-title {
+    font-size: 28px;
+  }
+  
+  .contact-line {
+    font-size: 16px;
+  }
+  
+  .service-info-container {
+    padding: 20px 25px;
+  }
+  
+  .service-title {
+    font-size: 18px;
+  }
+  
+  .service-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-container {
+    margin: 20px 15px;
+  }
+  
+  .contacts-info {
+    padding: 20px 25px;
+  }
+  
+  .contacts-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .contact-line {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .service-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .service-icon {
+    font-size: 32px;
+    margin-top: 0;
+  }
+  
+  .service-title {
+    text-align: center;
+  }
+  
+  .service-description {
+    text-align: center;
+  }
+}
